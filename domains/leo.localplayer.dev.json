@@ -9,7 +9,38 @@
     },
   
     "record": {
-      "TXT": ["sl-verification=pbyotuzdgvdkthypnopopksefntrtj"]
+      "TXT": ["sl-verification=pbyotuzdgvdkthypnopopksefntrtj"],
+        "MX": [
+      {
+        "priority": 10,
+        "target": "mx1.simplelogin.co."
+      },
+      {
+        "priority": 20,
+        "target": "mx2.simplelogin.co."
+      }
+    ],
+    "SPF": {
+      "TXT": "v=spf1 include:simplelogin.co ~all"
+    },
+    "DKIM": [
+      {
+        "CNAME": "dkim03._domainkey",
+        "value": "dkim03._domainkey.simplelogin.co."
+      },
+      {
+        "CNAME": "dkim._domainkey",
+        "value": "dkim._domainkey.simplelogin.co."
+      },
+      {
+        "CNAME": "dkim02._domainkey",
+        "value": "dkim02._domainkey.simplelogin.co."
+      }
+    ]
+  },
+
+  "proxied": false
+}
     },
   
     "proxied": false
